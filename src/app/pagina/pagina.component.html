@@ -1,24 +1,24 @@
 <div class="row justify-content-md-center" style="margin-top: 200px;">
     <div class="card" style="width: 18rem; text-align: center;">
         <p>Adicione algo nas pilhas</p>
-        <input type="text" id="entrada">
-        <button type="button" class="btn btn-outline-primary" onclick="adicionaContainer(entrada)">adicionar</button>
+        <input type="text" #entrada>
+        <button type="button" class="btn btn-outline-primary" (click)="verificaVetores(entrada.value)">adicionar</button>
     </div>
     <div class="card" style="width: 18rem; text-align: center;">
         <p>Pilha 1</p>
-        <br>
+        <br>{{local1}}
         <p></p>
     </div>    <div class="card" style="width: 18rem; text-align: center;">
         <p>Pilha 2</p>
-        <br>
+        <br>{{local2}}
         <p></p>
     </div>    <div class="card" style="width: 18rem; text-align: center;">
         <p>Pilha 3</p>
-        <br>
+        <br>{{local3}}
         <p></p>
     </div>    <div class="card" style="width: 18rem; text-align: center;">
         <p>Pilha 4</p>
-        <br>
+        <br>{{local4}}
         <p></p>
     </div>
 </div>

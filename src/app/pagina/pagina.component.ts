@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaComponent implements OnInit {
 
-  local0 = [];
   local1 = [];
   local2 = [];
   local3 = [];
@@ -15,26 +14,35 @@ export class PaginaComponent implements OnInit {
 
   constructor(
   ) { }
-  
-  
 
   ngOnInit(): void {
-    this.local0.push(this.local1)
-    this.local0.push(this.local2)
-    this.local0.push(this.local3)
-    this.local0.push(this.local4)
-    console.log(this.local0)
   }
 
   adicionaContainer(container:any){
-    for(let i = 0; i < 4; i++){
-      if(this.local0[i].lenght < 3){
-        this.local0[i].push(container);
-        return window.alert("adicionado com sucesso")
-      }
+    let erro = 0;
+    if(this.local1.length < 3){
+      this.local1.push(container);
     }
-    return window.alert("Impossivel adicionar")
+    else if(this.local2.length < 3){
+      this.local2.push(container);
+    }
+    else if(this.local3.length < 3){
+      this.local3.push(container);
+    }
+    else if(this.local4.length < 3){
+      this.local4.push(container);
+    }
+    else{
+      window.alert("Impossível Empilhar!");
+    }
   }
 
-
+  verificaVetores(container:any){
+    this.adicionaContainer(container);
+    console.clear();
+    console.log("1" + this.local1)
+    console.log("2" +this.local2)
+    console.log("3" +this.local3)
+    console.log("4" +this.local4)
+  }
 }
