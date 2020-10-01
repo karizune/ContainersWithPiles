@@ -66,9 +66,10 @@ export class PaginaComponent implements OnInit {
 
   verificaVetores(container:any){
     this.adicionaContainer(container);
-    console.log("1" + this.local1)
-    console.log("2" +this.local2)
-    console.log("3" +this.local3)
-    console.log("4" +this.local4)
+    console.clear();
+    console.log("pilha 1: " + this.local1)
+    console.log("pilha 2: " +this.local2)
+    console.log("pilha 3: " +this.local3)
+    console.log("pilha 4: " +this.local4)
   }
 }
